@@ -108,7 +108,8 @@ def generate_answer_gemini(query, retrieved_documents):
 
     try:
         # Initialize the Gemini model
-        gemini_model = genai.GenerativeModel('gemini-1.5-flash-latest')
+        model_name = os.environ.get("GEMINI_MODEL", "gemini-3.8-flash")
+        gemini_model = genai.GenerativeModel(model_name)
 
         # Craft the prompt for the language model
         prompt = f"""Answer the following question based on the context below:

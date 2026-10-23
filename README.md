@@ -5,7 +5,7 @@ This project implements a Retrieval-Augmented Generation (RAG) assistant focused
 
 ## Features
 *   Retrieves relevant information from climate change papers using vector embeddings and ChromaDB.
-*   Uses the Google Generative AI API (Gemini 1.5 Flash) for generating answers.
+*   Uses the Google Generative AI API (Gemini 3.8 Flash) for generating answers.
 *   Provides a simple interactive interface for testing the assistant.
 *   Includes a Streamlit application for a more user-friendly web interface.
 
@@ -41,6 +41,13 @@ This project implements a Retrieval-Augmented Generation (RAG) assistant focused
         $env:GOOGLE_API_KEY='YOUR_API_KEY'
         ```
     *   For a more permanent solution, you can add this line to your shell's profile file (e.g., `.bashrc`, `.zshrc`, `config.fish`) and restart your terminal.
+
+### Model
+Answer generation uses `gemini-3.8-flash`, the current stable Gemini Flash model. Set `GEMINI_MODEL` to use a different model:
+
+```bash
+export GEMINI_MODEL='gemini-3.8-flash'
+```
 
 ### Running the Application
 
